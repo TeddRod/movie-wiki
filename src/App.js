@@ -8,6 +8,8 @@ function App() {
   const [currentList, setList] = useState()
   const [currentMovie, setMovie] = useState()
 
+  console.log(currentList);
+
   return (
     <div className="App">
       <SearchBar setList={setList}/>

@@ -1,9 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
+import SearchBar from './components/SearchBar';
+import List from './components/List';
+import MovieDetails from './components/MovieDetails';
 
 function App() {
+
+  const [currentList, setList] = useState()
+  const [currentMovie, setMovie] = useState()
+
   return (
     <div className="App">
-      Hello World!
+      <SearchBar setList={setList}/>
+      <List currentList={currentList} setMovie={setMovie}/>
+      <MovieDetails currentMovie={currentMovie}/>
     </div>
   );
 }

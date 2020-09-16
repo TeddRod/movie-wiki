@@ -1,6 +1,11 @@
 import React from 'react'
 
-function List() {
+function List({currentList, setMovie}) {
+
+        const selectMovie = (clickedMovie) => {
+                setMovie(clickedMovie)
+        }
+
         return (
                 <div>
 

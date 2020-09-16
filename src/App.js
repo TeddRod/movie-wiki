@@ -8,7 +8,7 @@ function App() {
   const [currentList, setList] = useState()
   const [currentMovie, setMovie] = useState()
 
-  console.log(currentList);
+  console.log(currentMovie);
 
   return (
     <div className="App">

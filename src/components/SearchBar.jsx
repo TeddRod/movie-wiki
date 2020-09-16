@@ -9,6 +9,12 @@ function SearchBar({setList}) {
                 setList(fromJson)
         }
 
+        const searchMovies = (e) => {
+                setInput(e.target.value);
+                let results = fromJson.filter(x => x.title.toUpperCase().indexOf(e.target.value.toUpperCase()) !== -1);
+                setList(results)
+        }
+
 
         useEffect(()=>{
                 listFromJson()

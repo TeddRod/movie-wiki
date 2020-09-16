@@ -15,6 +15,14 @@ function SearchBar({setList}) {
                 setList(results)
         }
 
+        const setToBlank = () => {
+                setInput("")
+        }
+
+        const eraseInput = () => {
+                setInput("what movie...")
+                setList(fromJson)
+        }
 
         useEffect(()=>{
                 listFromJson()

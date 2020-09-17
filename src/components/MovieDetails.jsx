@@ -31,7 +31,7 @@ function MovieDetails({currentMovie}) {
                                                                 <div id="oneActorPix" className="shdw" style={{ backgroundImage: `url(${oneActor.image})`}}/>
                                                                 <div id="oneActorInfo">
                                                                         <span className="fontRegularBold clrBlue">{oneActor.name}</span>
-                                                                        <span className="fontRegular clrGrey">{oneActor.character}</span>
+                                                                        <span className="fontMicro clrGrey">{oneActor.character}</span>
                                                                 </div>
                                                         </div>
                                                 ))}

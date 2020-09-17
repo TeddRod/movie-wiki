@@ -7,6 +7,7 @@ function App() {
 
   const [currentList, setList] = useState()
   const [currentMovie, setMovie] = useState()
+  const [currentActor, setActor] = useState()
 
   
   

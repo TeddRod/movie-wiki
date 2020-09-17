@@ -39,6 +39,7 @@
 }
 
 #movieRates {
+        width: 110px;
         font-size: 12px;
         display: flex;
         flex-direction: row;

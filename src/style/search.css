@@ -1,0 +1,18 @@
+#inputDiv {
+        padding: 8px;
+        background-color: white;
+        border-radius: 40px;
+}
+
+#input {
+        border: none;
+}
+
+#button {
+        border: none;
+        border-radius: 1000px;
+        background-color:  #0f0096;
+        color: white;
+        width: 20px;
+        height: 20px;
+}

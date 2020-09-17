@@ -5,32 +5,33 @@
 /*-----------*/
 
 @font-face {
-        font-family: 'circular regular';
-        src: url("./fonts/Circular\ Std\ Book.ttf");
+        font-family: 'circular-regular';
+        src: url("./fonts/CircularStdBook.woff2") format('woff2');
         font-size: 16px;
 }
 
 @font-face {
-        font-family: 'circular regular bold';
-        src: url("./fonts/Circular\ Std\ Bold.ttf");
+        font-family: 'circular-regular-bold';
+        src: url("./fonts/CircularStdBold.woff2") format('woff2');
         font-size: 16px;
 }
 
 @font-face {
-        font-family: 'circular big';
-        src: url("./fonts/Circular\ Std\ Bold.ttf");
+        font-family: 'circular-big';
+        src: url("./fonts/CircularStdBold.woff2") format('woff2');
         font-size: 22px;
 }
 
 @font-face {
-        font-family: 'circular bigger';
-        src: url("./fonts/Circular\ Std\ Black.ttf");
+        font-family: 'circular-bigger';
+        src: url("./fonts/CircularStdBlack.woff2") format('woff2');
         font-size: 30px;
 }
 
 @font-face {
-        font-family: 'circular micro';
-        src: url("./fonts/Circular\ Std\ Book\ Italic.ttf");
+        font-family: 'circular-micro';
+        src: url("./fonts/CircularStdBookItalic.woff2") format('woff2');
+        font-style: italic;
         font-size: 12px;
 }
 
@@ -44,19 +45,38 @@
 
 /*-----------*/
 
-.txtBlack {
+.fontMicro {
+        font-family: "circular-micro";
+}
+
+.fontRegular {
+        font-family: "circular-regular";
+}
+.fontRegular.bold {
+        font-family: "circular-regular-bold";
+}
+
+.fontBig {
+        font-family: "circular-big";
+}
+
+.fontBigger {
+        font-family: "circular-bigger";
+}
+
+.clrBlack {
         color: #111;
 }
 
-.txtGreen {
+.clrGreen {
         color: #0dd27a;
 }
 
-.txtBlue {
+.clrBlue {
         color: #0f0096;
 }
 
-.txtGrey {
+.clrGrey {
         color: #7e7e7e;
 }
 
@@ -83,7 +103,7 @@
 }
 
 #searchBarDiv {
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -92,7 +112,7 @@
 }
 
 #listDiv {
-        border: 1px solid green;
+        /* border: 1px solid green; */
         padding: 20px 28px;
 }
 

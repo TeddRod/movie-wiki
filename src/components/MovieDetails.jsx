@@ -2,7 +2,7 @@ import React from 'react'
 
 function MovieDetails({currentMovie}) {
         return (
-                <div>
+                <div id="detailsSection">
                         {currentMovie && (
                                 <>
                                 <section>

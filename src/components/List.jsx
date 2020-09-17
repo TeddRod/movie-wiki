@@ -7,7 +7,7 @@ function List({currentList, setMovie}) {
         }
 
         return (
-                <div>
+                <div id="listDiv">
                         {currentList && currentList.map(oneMovie => (
                                 <div key={oneMovie.id} onClick={() => selectMovie(oneMovie)}>
                                         <div>

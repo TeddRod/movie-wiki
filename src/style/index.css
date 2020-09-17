@@ -1,0 +1,103 @@
+@import './search.css';
+@import './list.css';
+@import './details.css';
+
+/*-----------*/
+
+@font-face {
+        font-family: 'circular regular';
+        src: url("./fonts/Circular\ Std\ Book.ttf");
+        font-size: 16px;
+}
+
+@font-face {
+        font-family: 'circular regular bold';
+        src: url("./fonts/Circular\ Std\ Bold.ttf");
+        font-size: 16px;
+}
+
+@font-face {
+        font-family: 'circular big';
+        src: url("./fonts/Circular\ Std\ Bold.ttf");
+        font-size: 22px;
+}
+
+@font-face {
+        font-family: 'circular bigger';
+        src: url("./fonts/Circular\ Std\ Black.ttf");
+        font-size: 30px;
+}
+
+@font-face {
+        font-family: 'circular micro';
+        src: url("./fonts/Circular\ Std\ Book\ Italic.ttf");
+        font-size: 12px;
+}
+
+/*-----------*/
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+}
+
+/*-----------*/
+
+.txtBlack {
+        color: #111;
+}
+
+.txtGreen {
+        color: #0dd27a;
+}
+
+.txtBlue {
+        color: #0f0096;
+}
+
+.txtGrey {
+        color: #7e7e7e;
+}
+
+.searchBar-background {
+        background-color: #0dd27a;
+}
+
+.article-background {
+        background-color: #fafafc;
+}
+
+
+/*-----------*/
+
+#App {
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+}
+
+#searchSection {
+        border: 1px solid red;
+        width: 400px;
+}
+
+#searchBarDiv {
+        border: 1px solid blue;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 30px;
+}
+
+#listDiv {
+        border: 1px solid green;
+        padding: 20px 28px;
+}
+
+#detailsSection {
+        border: 1px solid orange;
+        width: 100%;
+        padding: 40px;
+}

@@ -11,9 +11,13 @@ function App() {
   console.log(currentMovie);
 
   return (
-    <div className="App">
-      <SearchBar setList={setList}/>
-      <List currentList={currentList} setMovie={setMovie}/>
+    <div id="App">
+
+      <section id="searchSection">
+        <SearchBar setList={setList}/>
+        <List currentList={currentList} setMovie={setMovie}/>
+      </section>
+
       <MovieDetails currentMovie={currentMovie}/>
     </div>
   );

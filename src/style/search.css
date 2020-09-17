@@ -1,7 +1,11 @@
 #inputDiv {
-        padding: 8px;
+        padding: 8px 10px;
         background-color: white;
         border-radius: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
 }
 
 #input {
@@ -18,4 +22,8 @@
         width: 20px;
         height: 20px;
         outline: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
 }

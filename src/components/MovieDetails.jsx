@@ -18,7 +18,7 @@ function MovieDetails({currentMovie}) {
 
                                 <section>
                                         <div id="overviewSection">
-                                                <span className="clrBlack fontBig">Overview :</span>
+                                                <span id="overview" className="clrBlack fontBig">Overview :</span>
                                                 <span className="clrGrey fontRegular">{currentMovie.overview}</span>
                                         </div>
                                 </section>

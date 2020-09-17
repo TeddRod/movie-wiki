@@ -104,7 +104,7 @@
 
 #searchSection {
         /* border: 1px solid red; */
-        width: 400px;
+        width: 450px;
         height: 100vh;
         display: flex;
         flex-direction: column;
@@ -122,8 +122,12 @@
 
 #listDiv {
         /* border: 1px solid green; */
+        height: 100%;
         padding: 20px 28px;
         overflow: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
 }
 
 #detailsSection {

@@ -7,7 +7,7 @@
 @font-face {
         font-family: 'circular-regular';
         src: url("./fonts/CircularStdBook.woff2") format('woff2');
-        font-size: 16px;
+        
 }
 
 @font-face {
@@ -51,6 +51,7 @@
 
 .fontRegular {
         font-family: "circular-regular";
+        font-size: 17px;
 }
 .fontRegular.bold {
         font-family: "circular-regular-bold";
@@ -80,12 +81,16 @@
         color: #7e7e7e;
 }
 
-.searchBar-background {
+.green-background {
         background-color: #0dd27a;
 }
 
-.article-background {
+.white-background {
         background-color: #fafafc;
+}
+
+.star {
+        color: rgb(255, 187, 0);
 }
 
 
@@ -98,8 +103,12 @@
 }
 
 #searchSection {
-        border: 1px solid red;
+        /* border: 1px solid red; */
         width: 400px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
 }
 
 #searchBarDiv {
@@ -114,10 +123,11 @@
 #listDiv {
         /* border: 1px solid green; */
         padding: 20px 28px;
+        overflow: auto;
 }
 
 #detailsSection {
-        border: 1px solid orange;
+        /* border: 1px solid orange; */
         width: 100%;
         padding: 40px;
 }

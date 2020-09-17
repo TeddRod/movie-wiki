@@ -7,7 +7,7 @@ function List({currentList, setMovie}) {
         }
 
         return (
-                <div id="listDiv" className="white-background">
+                <div id="listDiv" className="white-background shdw">
                         {currentList && currentList.map(oneMovie => (
                                 <div id="oneMovie" key={oneMovie.id} onClick={() => selectMovie(oneMovie)}>
                                         <div id="pixNtitle">

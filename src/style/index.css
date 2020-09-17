@@ -94,7 +94,11 @@
 }
 
 .shdw {
-        box-shadow: 0 1px 10px rgba(0, 0, 0, 0.17);
+        box-shadow: 0 1px 10px rgba(0, 0, 0, 0.10);
+}
+
+.inset-shdw {
+        box-shadow: inset 0 -1px 8px rgba(0, 0, 0, 0.10);
 }
 
 
@@ -136,9 +140,11 @@
 
 #detailsSection {
         /* border: 1px solid orange; */
-        width: 100%;
+        width: 100vw;
         height: 100vh;
-        /* margin: 40px; */
-        padding: 30px 70px;
+        padding: 0 5%;
         overflow: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 }

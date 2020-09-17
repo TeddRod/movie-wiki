@@ -42,10 +42,10 @@ function SearchBar({setList}) {
         //       console.log(fromApi);
 
         return (
-                <div id="searchBarDiv" className="green-background">
-                        <div id="inputDiv">
+                <div id="searchBarDiv" className="green-background shdw">
+                        <div id="inputDiv" className="inset-shdw">
                                 <input id="input" className="clrGrey  fontRegular" type="text" value={textInput} onChange={(e) => searchMovies(e)} onClick={setToBlank}></input>
-                                <button id="button" style={{ fontSize: "12px"}} onClick={eraseInput}>✕</button>
+                                <button id="button" className="shdw" style={{ fontSize: "12px"}} onClick={eraseInput}>✕</button>
                         </div>   
                 </div>
         )

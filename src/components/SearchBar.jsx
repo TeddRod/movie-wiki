@@ -1,17 +1,19 @@
-import React, {useEffect, useState} from 'react';
-import {fromJson} from '../api/testData/toObject'
+import React, {/*useEffect,*/ useState, useLayoutEffect} from 'react';
+// import {fromJson} from '../api/testData/toObject';
+import { loadingMoviesFromApi } from '../api/apiHandler';
 
 function SearchBar({setList}) {
 
+        const [fromApi, setFromApi] = useState()
         const [textInput, setInput] = useState("what movie ?")
 
-        const listFromJson = () => {
-                setList(fromJson)
-        }
+        // const listFromJson = () => {
+        //         setList(fromJson)
+        // }
 
         const searchMovies = (e) => {
                 setInput(e.target.value);
-                let results = fromJson.filter(x => x.title.toUpperCase().indexOf(e.target.value.toUpperCase()) !== -1);
+                let results = fromApi.filter(x => x.title.toUpperCase().indexOf(e.target.value.toUpperCase()) !== -1);
                 setList(results)
         }
 
@@ -21,12 +23,23 @@ function SearchBar({setList}) {
 
         const eraseInput = () => {
                 setInput("what movie...")
-                setList(fromJson)
+                setList(fromApi)
         }
 
-        useEffect(()=>{
-                listFromJson()
-        },[])
+        // useEffect(()=>{
+        //         listFromJson()
+        // },[])
+
+        useLayoutEffect(() => {
+                loadingMoviesFromApi()
+                .then((res) =>{
+                //   console.log(res)
+                  setFromApi(res)
+                  setList(res)
+                })
+              },[])
+
+        //       console.log(fromApi);
 
         return (
                 <div id="searchBarDiv" className="green-background">

@@ -129,5 +129,6 @@
 #detailsSection {
         /* border: 1px solid orange; */
         width: 100%;
-        padding: 40px;
+        margin: 60px;
+        padding: 90px 180px;
 }

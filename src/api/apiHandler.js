@@ -52,10 +52,12 @@ const actorDetailsFromApi = (givenData) => {
                                 id: response1.data.id,
                                 name: response1.data.name,
                                 birthday: response1.data.birthday,
-                                birth_place: response1.data.birthday,
+                                birth_place: response1.data.place_of_birth,
                                 popularity: response1.data.popularity,
-                                biography: response1.data.biography,
+                                bio: response1.data.biography,
                                 image: response1.data.profile_path,
+                                movie_credits: [],
+                                tv_credits: [],
                         }
                         return actorDB
                 })
@@ -67,7 +69,9 @@ const actorDetailsFromApi = (givenData) => {
                 .then(() => {
                         return service(`${baseUrl}/person/${givenData}/movie_credits${apiKey}`)
                         .then((response2) => {
+                                // console.log(response2.data);
                                 response2.data.cast.map(eachMovie =>{
+                                        // console.log(eachMovie);
                                         let oneMovie = {
                                                 title: eachMovie.title,
                                                 release_date: eachMovie.release_date,
@@ -91,7 +95,7 @@ const actorDetailsFromApi = (givenData) => {
                         .then((response3) => {
                                 response3.data.cast.map(eachShow =>{
                                         let oneTvShow = {
-                                                title: eachShow.title,
+                                                title: eachShow.name,
                                                 first_air_date: eachShow.first_air_date,
                                                 character: eachShow.character
                                         }

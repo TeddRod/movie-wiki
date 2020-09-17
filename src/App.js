@@ -24,7 +24,9 @@ function App() {
       </section>
 
       <MovieDetails currentMovie={currentMovie} setActor={setActor}/>
-      <ActorDetails currentActor={currentActor}/>
+      {currentActor && (
+        <ActorDetails currentActor={currentActor}/>
+                     )}   
     </div>
   );
 }

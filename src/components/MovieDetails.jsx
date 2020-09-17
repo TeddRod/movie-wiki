@@ -3,6 +3,7 @@ import React from 'react'
 function MovieDetails({currentMovie, setActor}) {
 
         const selectActor = (clickedActor) => {
+                // console.log(clickedActor);
                 setActor(clickedActor)
         }
 
@@ -11,7 +12,7 @@ function MovieDetails({currentMovie, setActor}) {
                         {currentMovie && (
                                 <div id="detailsDiv" className="white-background shdw">
                                         <section id="mainSection">
-                                                <div id="detailPoster" className="shdw" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original/${currentMovie.poster_path})`}}/>
+                                                <div id="detailPoster" className="shdw" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original${currentMovie.poster_path})`}}/>
                                                 <div>
                                                         <div id="detailTitle">
                                                                 <div className="fontBig clrBlack"><span className="clrBlue">{currentMovie.vote_average}</span> <span className="star">★</span>, votes: <span className="clrBlue">{currentMovie.vote_count}</span></div>

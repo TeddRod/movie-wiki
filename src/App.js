@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import SearchBar from './components/SearchBar';
 import List from './components/List';
 import MovieDetails from './components/MovieDetails';
+import ActorDetails from './components/ActorDetails'
 
 function App() {
 
@@ -22,7 +23,8 @@ function App() {
         <List currentList={currentList} setMovie={setMovie}/>
       </section>
 
-      <MovieDetails currentMovie={currentMovie}/>
+      <MovieDetails currentMovie={currentMovie} setActor={setActor}/>
+      <ActorDetails currentActor={currentActor}/>
     </div>
   );
 }

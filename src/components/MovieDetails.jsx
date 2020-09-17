@@ -1,6 +1,11 @@
 import React from 'react'
 
-function MovieDetails({currentMovie}) {
+function MovieDetails({currentMovie, setActor}) {
+
+        const selectActor = (clickedActor) => {
+                setActor(clickedActor)
+        }
+
         return (
                 <div id="detailsSection">
                         {currentMovie && (
@@ -27,7 +32,7 @@ function MovieDetails({currentMovie}) {
 
                                         <section id="cast" className="inset-shdw">
                                                 {currentMovie.cast && currentMovie.cast.map(oneActor => (
-                                                        <div id="oneActor" className="white-background shdw" key={oneActor.id}>
+                                                        <div id="oneActor" className="white-background shdw" key={oneActor.id} onClick={() => selectActor(oneActor.id)}>
                                                                 <div id="oneActorPix" className="shdw" style={{ backgroundImage: `url(${oneActor.image})`}}/>
                                                                 <div id="oneActorInfo">
                                                                         <span className="fontRegularBold clrBlue">{oneActor.name}</span>

@@ -7,32 +7,28 @@
 @font-face {
         font-family: 'circular-regular';
         src: url("./fonts/CircularStdBook.woff2") format('woff2');
-        
 }
 
 @font-face {
         font-family: 'circular-regular-bold';
         src: url("./fonts/CircularStdBold.woff2") format('woff2');
-        font-size: 16px;
 }
 
 @font-face {
         font-family: 'circular-big';
         src: url("./fonts/CircularStdBold.woff2") format('woff2');
-        font-size: 22px;
 }
 
 @font-face {
         font-family: 'circular-bigger';
         src: url("./fonts/CircularStdBlack.woff2") format('woff2');
-        font-size: 30px;
 }
 
 @font-face {
         font-family: 'circular-micro';
         src: url("./fonts/CircularStdBookItalic.woff2") format('woff2');
         font-style: italic;
-        font-size: 12px;
+        
 }
 
 /*-----------*/
@@ -47,22 +43,26 @@
 
 .fontMicro {
         font-family: "circular-micro";
+        font-size: 12px;
 }
 
 .fontRegular {
         font-family: "circular-regular";
         font-size: 17px;
 }
-.fontRegular.bold {
+.fontRegularBold {
         font-family: "circular-regular-bold";
+        font-size: 16px;
 }
 
 .fontBig {
         font-family: "circular-big";
+        font-size: 22px;
 }
 
 .fontBigger {
         font-family: "circular-bigger";
+        font-size: 30px;
 }
 
 .clrBlack {

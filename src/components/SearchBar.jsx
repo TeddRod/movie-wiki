@@ -31,7 +31,7 @@ function SearchBar({setList}) {
         return (
                 <div id="searchBarDiv" className="green-background">
                         <div id="inputDiv">
-                                <input id="input" className="clrGrey  fontMicro" type="text" value={textInput} onChange={(e) => searchMovies(e)} onClick={setToBlank}></input>
+                                <input id="input" className="clrGrey  fontRegular" type="text" value={textInput} onChange={(e) => searchMovies(e)} onClick={setToBlank}></input>
                                 <button id="button" onClick={eraseInput}>✕</button>
                         </div>   
                 </div>

@@ -26,7 +26,7 @@ const loadingMoviesFromApi = () => {
                                         response5.data.cast.map(eachActor => {
                                                 // console.log(eachMovie.cast)
                                                 if (eachActor.profile_path !== null){
-                                                eachActor.image = `url(https://image.tmdb.org/t/p/original//w185${eachActor.profile_path}`
+                                                eachActor.image = `https://image.tmdb.org/t/p/w185${eachActor.profile_path}`
                                                 return eachMovie.cast.push(eachActor) 
                                                 }
                                         return eachActor

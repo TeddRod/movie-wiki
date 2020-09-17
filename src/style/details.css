@@ -1,10 +1,11 @@
-#detailsSection {
+#detailsDiv {
         border-radius: 30px;
+        padding: 20px;
 }
 
 #mainSection {
         /* border: 1px solid orange; */
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         display: flex;
         flex-direction: row;
         align-items: flex-end;
@@ -12,7 +13,7 @@
 }
 
 #detailPoster {
-        border: 1px solid white;
+        /* border: 1px solid white; */
         border-radius: 10px;
         width: 280px;
         height: 400px;
@@ -34,5 +35,43 @@
 }
 
 #overview {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
+}
+
+#cast {
+        border-radius: 30px;
+        background-color: white;
+        padding: 20px 30px;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: auto;
+        height: 35vh;
+        margin: 40px;
+}
+
+#oneActor {
+        border-radius: 10px;
+        width: 300px;
+        margin: 15px;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+}
+
+#oneActorPix {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+        border: 2px solid #0dd27a;
+        border-radius: 1000px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+}
+
+#oneActorInfo {
+        /* border: 1px solid red; */
+        display: flex;
+        width: 70%;
+        flex-direction: column;
 }

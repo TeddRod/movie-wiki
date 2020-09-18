@@ -108,13 +108,26 @@
 #App {
         display: flex;
         flex-direction: row;
-        height: 100vh;
+        /* flex-direction: row; */
+        /* height: 100vh; */
         position: relative;
+}
+
+#welcomeSection {
+        /* border: 1px solid yellowgreen; */
+        width: 100vw;
+        height: 100vh;
+        padding: 0 5%;
+        /* overflow: auto; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 }
 
 #searchSection {
         /* border: 1px solid red; */
-        width: 450px;
+        width: 350px;
         height: 100vh;
         display: flex;
         flex-direction: column;
@@ -145,7 +158,6 @@
         width: 100vw;
         height: 100vh;
         padding: 0 5%;
-        overflow: auto;
         display: flex;
         align-items: center;
         justify-content: center;

@@ -1,7 +1,9 @@
 #detailsDiv {
+        /* border: 1px solid green; */
         border-radius: 30px;
+        /* width: 100%; */
         height: 90%;
-        padding: 20px;
+        padding: 40px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -10,7 +12,7 @@
 
 #mainSection {
         /* border: 1px solid orange; */
-        width: 100%;
+        width: 80%;
         margin: 0 auto;
         padding: 20px;
         display: flex;
@@ -50,8 +52,9 @@
 #cast {
         /* border: 1px solid green; */
         border-radius: 30px;
+        width: 80%;
         background-color: white;
-        /* padding: 20px 30px; */
+        padding: 20px 20px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;

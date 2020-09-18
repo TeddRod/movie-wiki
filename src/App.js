@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
+import WelcomeCpt from './components/WelcomeCpt';
 import SearchBar from './components/SearchBar';
 import List from './components/List';
 import MovieDetails from './components/MovieDetails';
-import ActorDetails from './components/ActorDetails'
+import ActorDetails from './components/ActorDetails';
 
 function App() {
 
@@ -23,7 +24,14 @@ function App() {
         <List currentList={currentList} setMovie={setMovie}/>
       </section>
 
-      <MovieDetails currentMovie={currentMovie} setActor={setActor}/>
+      {!currentMovie && (
+        <WelcomeCpt />
+      )}
+
+      {currentMovie && (
+        <MovieDetails currentMovie={currentMovie} setActor={setActor}/>
+      )}
+
       {currentActor && (
         <ActorDetails currentActor={currentActor} setActor={setActor} setMovie={setMovie}/>
                      )}   

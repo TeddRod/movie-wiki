@@ -9,7 +9,7 @@ function MovieDetails({currentMovie, setActor}) {
 
         return (
                 <div id="detailsSection">
-                        {currentMovie && (
+                        {/* {currentMovie && ( */}
                                 <div id="detailsDiv" className="white-background shdw">
                                         <section id="mainSection">
                                                 <div id="detailPoster" className="shdw" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original${currentMovie.poster_path})`}}/>
@@ -43,7 +43,7 @@ function MovieDetails({currentMovie, setActor}) {
                                                 ))}
                                         </section>
                                 </div>
-                        )}
+                        {/* )} */}
                 </div>
         )
 }

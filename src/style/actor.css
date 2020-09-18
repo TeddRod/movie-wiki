@@ -1,6 +1,6 @@
 #closeActorDiv{
         /* border: 1px solid blue; */
-        background-color: rgba(255, 255, 255, 0.450);
+        background-color: rgba(160, 158, 158, 0.45);
         width: 100vw;
         height: 100vh;
 }
@@ -49,6 +49,9 @@
 
 #actorCredits {
         /* border: 1px solid pink; */
+        border-radius: 10px;
+        background-color: white;
+        padding: 10px;
         margin: 15px;
         max-height: 50%;
         flex-grow: 1;

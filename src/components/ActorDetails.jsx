@@ -46,7 +46,7 @@ function ActorDetails({currentActor, setActor, setMovie}) {
                                                 <section id="actorIdentity">
                                                         <div id="actorPix" className="shdw" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original${actorDetails.image})` }}/>
                                                         <div id="actorInfo">
-                                                                <span className="fontBigger clrGreen">{actorDetails.name}</span>
+                                                                <span className="fontRegularBold clrGreen">{actorDetails.name}</span>
                                                                 <div className="fontBig clrBlue"><span className="fontRegularBold clrBlack">popularity: </span><span>{actorDetails.popularity}</span>  <span className="star">★</span></div>
                                                                 <span className="fontMicro clrGrey">{actorDetails.birthday}</span>
                                                         </div>
@@ -60,12 +60,12 @@ function ActorDetails({currentActor, setActor, setMovie}) {
                                                 )}
 
                                                 <span id="filmography" className="fontBig clrBlue">Filmography :</span>
-                                                <article id="actorCredits">
+                                                <article id="actorCredits" className="inset-shdw">
                                                         {actorDetails.movie_credits && (
                                                                 <section id="actorMovies">
                                                                         <span className="fontRegularBold clrBlue">movies :</span>
                                                                         {actorDetails.movie_credits.map(eachMovie => (
-                                                                                <div className="oneActorCast shdw" key={eachMovie.id} onClick={() => getThatMovie(eachMovie.id)}>
+                                                                                <div className="oneActorCast shdw white-background" key={eachMovie.id} onClick={() => getThatMovie(eachMovie.id)}>
                                                                                         <div className="oneMovieCastPix"  style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w185/${eachMovie.poster})`}}/>
                                                                                         <div className="oneActorCredits">
                                                                                                 <span className="fontRegular clrGrey">{eachMovie.character}</span>
@@ -81,7 +81,7 @@ function ActorDetails({currentActor, setActor, setMovie}) {
                                                                 <section id="actorTvShows">
                                                                         <span className="fontRegularBold clrBlue">tv shows :</span>
                                                                         {actorDetails.tv_credits.map(eachShow => (
-                                                                                <div className="oneActorCast shdw"  key={eachShow.id} onClick={() => getThatShow(eachShow.id)}>
+                                                                                <div className="oneActorCast shdw white-background"  key={eachShow.id} onClick={() => getThatShow(eachShow.id)}>
                                                                                         <div className="oneMovieCastPix"  style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w185/${eachShow.poster})`}}/>
                                                                                         <div className="oneActorCredits">
                                                                                                 <span className="fontRegular clrGrey">{eachShow.character}</span>

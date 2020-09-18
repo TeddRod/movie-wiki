@@ -156,8 +156,9 @@
 
 #detailsSection {
         /* border: 1px solid orange; */
-        width: 100vw;
+        width: 75vw;
         height: 100vh;
+        margin: 0 auto;
         padding: 0 5%;
         display: flex;
         align-items: center;

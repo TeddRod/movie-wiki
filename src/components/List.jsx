@@ -8,8 +8,8 @@ function List({currentList, setMovie}) {
 
         return (
                 <div id="listDiv" className="white-background shdw">
-                        {currentList && currentList.map(oneMovie => (
-                                <div id="oneMovie" key={oneMovie.id} onClick={() => selectMovie(oneMovie)}>
+                        {currentList && currentList.map((oneMovie, index) => (
+                                <div id="oneMovie" key={index} onClick={() => selectMovie(oneMovie)}>
                                         <div id="pixNtitle">
                                                 <div id="moviePix" className="shdw" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w185/${oneMovie.poster_path})`}} />
                                         </div>

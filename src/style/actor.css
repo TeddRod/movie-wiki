@@ -1,6 +1,6 @@
 #closeActorDiv{
         border: 1px solid blue;
-        background-color: rgba(255, 255, 255, 0.342);
+        background-color: rgba(255, 255, 255, 0.450);
         width: 100vw;
         height: 100vh;
 }
@@ -12,11 +12,14 @@
         padding: 15px;
         width: 420px;
         height: 740px;
+        display: flex;
+        flex-direction: column;
 }
 
 #actorIdentity {
         /* border: 1px solid dodgerblue; */
         height: 15%;
+        margin: 15px;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -28,6 +31,7 @@
         border-radius: 1000px;
         width: 100px;
         height: 100px;
+        margin-right: 15px;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -35,22 +39,48 @@
 
 #actorBio {
         /* border: 1px solid orange; */
-        margin-top: 15px;
-        height: 35%;
-}
-
-#biography {
-        /* border: 1px solid green; */
-        height: 85%;
+        margin: 15px;
+        min-height: 15%;
+        max-height: 40%;
+        flex-grow:1;
         overflow: auto;
 }
 
+
 #actorCredits {
         /* border: 1px solid pink; */
-        max-height: 43%;
+        margin: 15px;
+        max-height: 50%;
+        flex-grow: 1;
         overflow: auto;
 }
 
 #filmography {
         /* border: 1px solid pink;margin-top: px; */
+}
+
+.oneActorCast {
+        border-radius: 10px;
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        height: 100px;
+        margin: 10px;
+        padding: 10px;
+}
+
+.oneMovieCastPix {
+        border-radius: 4px;
+        width: 60px;
+        height: 85px;
+        margin-right: 10px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+} 
+
+.oneActorCredits {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
 }

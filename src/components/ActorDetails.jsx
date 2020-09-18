@@ -1,7 +1,7 @@
 import React, {useState, useLayoutEffect} from 'react';
-import {actorDetailsFromApi} from '../api/apiHandler';
+import {actorDetailsFromApi, getOneMovie, getOneTvShow} from '../api/apiHandler';
 
-function ActorDetails({currentActor, setActor}) {
+function ActorDetails({currentActor, setActor, setMovie}) {
 
         const [actorDetails, setActorDertails] = useState()
 
@@ -14,6 +14,25 @@ function ActorDetails({currentActor, setActor}) {
         },[])
 
         const closeActorDetails = () => {
+                setActor(false)
+        }
+
+        const getThatMovie = (clickedMovie) => {
+                console.log(clickedMovie);
+                getOneMovie(clickedMovie)
+                .then((res) => {
+                        // console.log(res)
+                        setMovie(res)
+                })
+                setActor(false)
+        }
+        
+        const getThatShow = (clickedMovie) => {
+                getOneTvShow(clickedMovie)
+                .then((res) => {
+                        // console.log(res)
+                        setMovie(res)
+                })
                 setActor(false)
         }
 
@@ -34,12 +53,10 @@ function ActorDetails({currentActor, setActor}) {
                                                 </section>
 
                                                 {actorDetails.bio && (
-                                                        <section id="actorBio">
-                                                                       
-                                                                                <span className="clrBlue fontBig">Biography :</span>
-                                                                                <div id="biography" className="clrGrey fontMicro">{actorDetails.bio}</div>
-                                                                        
-                                                        </section>
+                                                        <>
+                                                        <span className="clrBlue fontBig">Biography :</span>
+                                                        <div id="actorBio" className="clrGrey fontMicro">{actorDetails.bio}</div>
+                                                        </>
                                                 )}
 
                                                 <span id="filmography" className="fontBig clrBlue">Filmography :</span>
@@ -48,10 +65,13 @@ function ActorDetails({currentActor, setActor}) {
                                                                 <section id="actorMovies">
                                                                         <span className="fontRegularBold clrBlue">movies :</span>
                                                                         {actorDetails.movie_credits.map(eachMovie => (
-                                                                                <div id="oneActorMovieCredits">
-                                                                                        <span className="fontRegular clrGrey">{eachMovie.character}</span>
-                                                                                        <span className="fontRegularBold clrGreen">{eachMovie.title}</span>
-                                                                                        <span className="fontMicro clrGrey">{eachMovie.release_date}</span>
+                                                                                <div className="oneActorCast shdw" key={eachMovie.id} onClick={() => getThatMovie(eachMovie.id)}>
+                                                                                        <div className="oneMovieCastPix"  style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w185/${eachMovie.poster})`}}/>
+                                                                                        <div className="oneActorCredits">
+                                                                                                <span className="fontRegular clrGrey">{eachMovie.character}</span>
+                                                                                                <span className="fontRegularBold clrGreen">{eachMovie.title}</span>
+                                                                                                <span className="fontMicro clrGrey">{eachMovie.release_date}</span>
+                                                                                        </div>
                                                                                 </div>
                                                                         ))}
                                                                 </section>
@@ -61,10 +81,13 @@ function ActorDetails({currentActor, setActor}) {
                                                                 <section id="actorTvShows">
                                                                         <span className="fontRegularBold clrBlue">tv shows :</span>
                                                                         {actorDetails.tv_credits.map(eachShow => (
-                                                                                <div id="oneActorTvCredits">
-                                                                                        <span className="fontRegular clrGrey">{eachShow.character}</span>
-                                                                                        <span className="fontRegularBold clrGreen">{eachShow.title}</span>
-                                                                                        <span className="fontMicro clrGrey">{eachShow.first_air_date}</span>
+                                                                                <div className="oneActorCast shdw"  key={eachShow.id} onClick={() => getThatShow(eachShow.id)}>
+                                                                                        <div className="oneMovieCastPix"  style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w185/${eachShow.poster})`}}/>
+                                                                                        <div className="oneActorCredits">
+                                                                                                <span className="fontRegular clrGrey">{eachShow.character}</span>
+                                                                                                <span className="fontRegularBold clrGreen">{eachShow.title}</span>
+                                                                                                <span className="fontMicro clrGrey">{eachShow.first_air_date}</span>
+                                                                                        </div>
                                                                                 </div>
                                                                         ))}
                                                                 </section>

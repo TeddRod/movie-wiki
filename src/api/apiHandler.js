@@ -74,9 +74,11 @@ const actorDetailsFromApi = (givenData) => {
                                 response2.data.cast.map(eachMovie =>{
                                         // console.log(eachMovie);
                                         let oneMovie = {
+                                                id: eachMovie.id,
                                                 title: eachMovie.title,
                                                 release_date: eachMovie.release_date,
-                                                character: eachMovie.character
+                                                character: eachMovie.character,
+                                                poster: eachMovie.poster_path,
                                         }
 
                                         actorDB.movie_credits.push(oneMovie)
@@ -96,9 +98,11 @@ const actorDetailsFromApi = (givenData) => {
                         .then((response3) => {
                                 response3.data.cast.map(eachShow =>{
                                         let oneTvShow = {
+                                                id: eachShow.id,
                                                 title: eachShow.name,
                                                 first_air_date: eachShow.first_air_date,
-                                                character: eachShow.character
+                                                character: eachShow.character,
+                                                poster: eachShow.poster_path,
                                         }
 
                                         actorDB.tv_credits.push(oneTvShow)
@@ -114,4 +118,88 @@ const actorDetailsFromApi = (givenData) => {
                 })
 }
 
-export { loadingMoviesFromApi, actorDetailsFromApi }
+const getOneMovie = (givenData) => {
+        let oneMovieDB
+
+        return service(`${baseUrl}/movie/${givenData}${apiKey}`)
+        .then((response1) => {
+                oneMovieDB = {
+                        id: response1.data.id,
+                        title: response1.data.title,
+                        poster_path: response1.data.poster_path,
+                        vote_average: response1.data.vote_average,
+                        vote_count: response1.data.vote_count,
+                        original_language: response1.data.original_language,
+                        release_date: response1.data.release_date,
+                        overview: response1.data.overview,
+                        popularity: response1.data.popularity,
+                        cast:[],
+                }
+                console.log(oneMovieDB);
+                return oneMovieDB
+        })
+        .catch((err) => {
+                console.log(err)
+        })
+
+        .then(() => {
+                return service(`${baseUrl}/movie/${givenData}/credits${apiKey}`)
+                .then((response2) => {
+                        response2.data.cast.map(eachActor => {
+                                if (eachActor.profile_path !== null){
+                                eachActor.image = `https://image.tmdb.org/t/p/w185${eachActor.profile_path}`
+                                return oneMovieDB.cast.push(eachActor) 
+                                }
+                        return oneMovieDB
+                        })
+                        return oneMovieDB
+                })
+                .catch((err) => {
+                        console.log(err)
+                })
+        })
+}
+
+const getOneTvShow = (givenData) => {
+        let oneShowDB
+
+        return service(`${baseUrl}/tv/${givenData}${apiKey}`)
+        .then((response1) => {
+                oneShowDB = {
+                        id: response1.data.id,
+                        title: response1.data.name,
+                        poster_path: response1.data.poster_path,
+                        vote_average: response1.data.vote_average,
+                        vote_count: response1.data.vote_count,
+                        original_language: response1.data.original_language,
+                        release_date: response1.data.first_air_date,
+                        popularity: response1.data.popularity,
+                        overview: response1.data.overview,
+                        cast:[],
+                }
+                
+                return oneShowDB
+        })
+        .catch((err) => {
+                console.log(err)
+        })
+
+        .then(() => {
+                return service(`${baseUrl}/tv/${givenData}/credits${apiKey}`)
+                .then((response2) => {
+                        response2.data.cast.map(eachActor => {
+                                if (eachActor.profile_path !== null){
+                                eachActor.image = `https://image.tmdb.org/t/p/w185${eachActor.profile_path}`
+                                return oneShowDB.cast.push(eachActor) 
+                                }
+                        return oneShowDB
+                        })
+                        return oneShowDB
+                })
+                .catch((err) => {
+                        console.log(err)
+                })
+        })
+}
+
+export { loadingMoviesFromApi, actorDetailsFromApi, getOneMovie, getOneTvShow }

@@ -4,7 +4,7 @@ const loadingMoviesFromApi = () => {
         //returns an array of movies from the API database...
         let moviesDB = []
 
-      return  service(`${baseUrl}/movie/top_rated${apiKey}`)
+      return  service(`${baseUrl}/movie/popular${apiKey}`)
                 .then((response1) => {  
                         //feeding the MoviesDB array with the most popular movies from the API
                         moviesDB = response1.data.results

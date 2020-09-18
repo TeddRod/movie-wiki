@@ -1,6 +1,6 @@
 #detailsDiv {
         /* border: 1px solid green; */
-        border-radius: 30px;
+        border-radius: 10px;
         margin: 0 auto;
         height: 90%;
         padding: 40px;
@@ -52,7 +52,7 @@
 
 #cast {
         /* border: 1px solid green; */
-        border-radius: 30px;
+        border-radius: 10px;
         width: 95%;
         background-color: white;
         padding: 20px 10px;
@@ -72,6 +72,10 @@
         padding: 10px;
         display: flex;
         flex-direction: row;
+}
+
+#oneActor:hover {
+        background-color: #eefcf5;
 }
 
 #oneActorPix {

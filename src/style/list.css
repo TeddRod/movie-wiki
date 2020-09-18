@@ -7,12 +7,13 @@
 }
 
 #oneMovie:hover {
-        background-color: white;
-        border-radius: 4px;
-        box-shadow: 0 1px 10px rgba(0, 0, 0, 0.10);
-        transform: scale(1.05, 1.05);
-        -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-        transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        background-color: #eefcf5;
+        border-right: 3px solid #0dd27a;
+        /* border-radius: 4px; */
+        /* box-shadow: 0 1px 10px rgba(0, 0, 0, 0.10); */
+        /* transform: scale(1.05, 1.05); */
+        /* -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); */
 }
 
 #pixNtitle {
@@ -36,7 +37,7 @@
 #movieTitle {
         /* border: 1px solid blue; */
         text-align: left;
-        width: 80%;
+        width: 75%;
 }
 
 #movieInfo {

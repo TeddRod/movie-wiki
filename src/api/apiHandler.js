@@ -59,6 +59,7 @@ const actorDetailsFromApi = (givenData) => {
                                 movie_credits: [],
                                 tv_credits: [],
                         }
+                        console.log(actorDB);
                         return actorDB
                 })
 
@@ -103,8 +104,8 @@ const actorDetailsFromApi = (givenData) => {
                                         actorDB.tv_credits.push(oneTvShow)
                                         return actorDB
                                 })
+                                // console.log(actorDB);
                                 return actorDB
-                                
                         })
                         .catch((err) => {
                                 console.log(err)

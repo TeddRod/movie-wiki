@@ -1,0 +1,56 @@
+#closeActorDiv{
+        border: 1px solid blue;
+        background-color: rgba(255, 255, 255, 0.342);
+        width: 100vw;
+        height: 100vh;
+}
+
+#actorDiv {
+        /* border: 1px solid yellowgreen; */
+        position: absolute;
+        border-radius: 10px;
+        padding: 15px;
+        width: 420px;
+        height: 740px;
+}
+
+#actorIdentity {
+        /* border: 1px solid dodgerblue; */
+        height: 15%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+}
+
+#actorPix {
+        border: 2px solid #0dd27a;
+        border-radius: 1000px;
+        width: 100px;
+        height: 100px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+}
+
+#actorBio {
+        /* border: 1px solid orange; */
+        margin-top: 15px;
+        height: 35%;
+}
+
+#biography {
+        /* border: 1px solid green; */
+        height: 85%;
+        overflow: auto;
+}
+
+#actorCredits {
+        /* border: 1px solid pink; */
+        max-height: 43%;
+        overflow: auto;
+}
+
+#filmography {
+        /* border: 1px solid pink;margin-top: px; */
+}

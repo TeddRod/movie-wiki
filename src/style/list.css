@@ -1,4 +1,5 @@
 #oneMovie {
+        height: 85px;
         margin: 20px 0;
         display: flex;
         flex-direction: row;

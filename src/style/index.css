@@ -147,11 +147,10 @@
 #listDiv {
         /* border: 1px solid green; */
         height: 100%;
-        padding: 20px 28px;
+        padding: 30px;
         overflow: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+        display: inline;
+        /* flex-direction: column; */
 }
 
 #detailsSection {

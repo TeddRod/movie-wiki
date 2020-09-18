@@ -16,7 +16,7 @@ function MovieDetails({currentMovie, setActor}) {
                                                 <div>
                                                         <div id="detailTitle">
                                                                 <div className="fontBig clrBlack"><span className="clrBlue">{currentMovie.vote_average}</span> <span className="star">★</span>, votes: <span className="clrBlue">{currentMovie.vote_count}</span></div>
-                                                                <span className="clrGreen fontBigger">{currentMovie.title}</span> <span className="clrGrey fontMicro"> {currentMovie.original_language}</span>
+                                                                <span className="clrGreen fontBig">{currentMovie.title}</span> <span className="clrGrey fontMicro"> {currentMovie.original_language}</span>
                                                                 <div className="clrGrey fontMicro">{currentMovie.release_date}</div>
                                                         </div>
                                                 </div>

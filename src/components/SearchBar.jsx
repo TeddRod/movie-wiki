@@ -1,6 +1,6 @@
 import React, {/*useEffect,*/ useState, useLayoutEffect} from 'react';
 // import {fromJson} from '../api/testData/toObject';
-import { loadingMoviesFromApi } from '../api/apiHandler';
+import { loadingMoviesFromApi, queryMoviesFromApi } from '../api/apiHandler';
 
 function SearchBar({setList}) {
 
@@ -13,8 +13,12 @@ function SearchBar({setList}) {
 
         const searchMovies = (e) => {
                 setInput(e.target.value);
-                let results = fromApi.filter(x => x.title.toUpperCase().indexOf(e.target.value.toUpperCase()) !== -1);
-                setList(results)
+                // let results = fromApi.filter(x => x.title.toUpperCase().indexOf(e.target.value.toUpperCase()) !== -1);
+                queryMoviesFromApi(e.target.value)
+                .then((results) =>{
+                        setList(results)
+                })
+                
         }
 
         const setToBlank = () => {

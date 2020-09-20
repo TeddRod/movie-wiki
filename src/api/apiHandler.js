@@ -41,6 +41,46 @@ const loadingMoviesFromApi = () => {
                 })
 }
 
+const queryMoviesFromApi = (givenData) => {
+        let moviesDB = []
+
+        return service(`${baseUrl}/search/movie${apiKey}&query=${givenData}&page=1&include_adult=false`)
+        .then((response1) => {  
+                //feeding the MoviesDB array with the most popular movies from the API
+                moviesDB = response1.data.results
+                return moviesDB
+        })
+
+        .catch((err) => {
+                console.log(err)
+        })
+
+        .then(() => {
+                //adding every actor from the cast of each movie (only if each actor has his picture in the API)
+                moviesDB.map(eachMovie => {
+                        eachMovie.cast = []
+                        // console.log(eachMovie)
+                        return service(`${baseUrl}/movie/${eachMovie.id}/credits${apiKey}`)
+                        .then((response2) => {
+                                // console.log(response3)
+                                response2.data.cast.map(eachActor => {
+                                        // console.log(eachMovie.cast)
+                                        if (eachActor.profile_path !== null){
+                                        eachActor.image = `https://image.tmdb.org/t/p/w185${eachActor.profile_path}`
+                                        return eachMovie.cast.push(eachActor) 
+                                        }
+                                return eachActor
+                                })
+                                return eachMovie
+                        })
+                        .catch((err) => {
+                                console.log(err)
+                        })
+                })
+                return moviesDB
+        })
+}
+
 const actorDetailsFromApi = (givenData) => {
         //returns an array of movies from the API database...
         let actorDB = {}
@@ -202,4 +242,4 @@ const getOneTvShow = (givenData) => {
         })
 }
 
-export { loadingMoviesFromApi, actorDetailsFromApi, getOneMovie, getOneTvShow }
+export { loadingMoviesFromApi, actorDetailsFromApi, getOneMovie, getOneTvShow, queryMoviesFromApi }

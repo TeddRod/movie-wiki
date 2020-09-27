@@ -109,15 +109,16 @@
         color: #0f0096;
         font-family: "circular-regular-bold";
         font-size: 16px;
-        margin: 40px auto;
-        padding: 5px 15px;
+        margin: 15px auto;
+        padding: 10px 15px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        text-align: center;
         box-shadow: 0 1px 10px rgba(0, 0, 0, 0.10);
         width: 70px;
-        height: 45px;
+        height: auto;
 }
 
 
@@ -132,7 +133,7 @@
 }
 
 #welcomeSection {
-        border: 1px solid yellowgreen;
+        /* border: 1px solid yellowgreen; */
         width: 60vw;
         margin: auto;
         height: 100vh;
@@ -172,7 +173,7 @@
 }
 
 #detailsSection {
-        border: 1px solid orange;
+        /* border: 1px solid orange; */
         width: 75vw;
         height: 100vh;
         margin: 0 auto;

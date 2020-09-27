@@ -4,7 +4,6 @@ import { loadingMoviesFromApi, queryMoviesFromApi } from '../api/apiHandler';
 
 function SearchBar({setList}) {
 
-        const [fromApi, setFromApi] = useState()
         const [textInput, setInput] = useState("what movie ?")
 
         // const listFromJson = () => {
@@ -26,8 +25,11 @@ function SearchBar({setList}) {
         }
 
         const eraseInput = () => {
+                loadingMoviesFromApi()
+                .then((res) => {
+                        setList(res)
+                })
                 setInput("what movie...")
-                setList(fromApi)
         }
 
         // useEffect(()=>{
@@ -38,7 +40,6 @@ function SearchBar({setList}) {
                 loadingMoviesFromApi()
                 .then((res) =>{
                 //   console.log(res)
-                  setFromApi(res)
                   setList(res)
                 })
               },[])

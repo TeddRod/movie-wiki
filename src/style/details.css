@@ -52,6 +52,7 @@
 
 #cast {
         /* border: 1px solid green; */
+        border: #7e7e7e;
         border-radius: 10px;
         width: 95%;
         background-color: white;
@@ -94,4 +95,10 @@
         display: flex;
         width: 70%;
         flex-direction: column;
+}
+
+@media only screen and (max-width: 766px) {
+        #detailsDiv {
+                height: 100vh;
+        }
 }

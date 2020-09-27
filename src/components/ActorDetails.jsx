@@ -35,6 +35,10 @@ function ActorDetails({currentActor, setActor, setMovie}) {
                 })
                 setActor(false)
         }
+        const closeActor = () => {
+                console.log("closing view");
+                setActor(false)
+        }
 
         // console.log(actorDetails);
 
@@ -93,6 +97,7 @@ function ActorDetails({currentActor, setActor, setMovie}) {
                                                                 </section>
                                                         )}
                                                 </article>
+                                                <button className="closeBtn" style={{ display: window.innerWidth < 766 ? "block" : "none" }} onClick={() => closeActor()}>close</button>
                                         </div>
 
                                         <div id="closeActorDiv" onClick={closeActorDetails}/>

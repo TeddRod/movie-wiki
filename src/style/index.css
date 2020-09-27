@@ -102,6 +102,24 @@
         box-shadow: inset 0 -1px 8px rgba(0, 0, 0, 0.10);
 }
 
+.closeBtn {
+        border: none;
+        border-radius: 4px;
+        background-color: #0dd27a;
+        color: #0f0096;
+        font-family: "circular-regular-bold";
+        font-size: 16px;
+        margin: 40px auto;
+        padding: 5px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 1px 10px rgba(0, 0, 0, 0.10);
+        width: 70px;
+        height: 45px;
+}
+
 
 /*-----------*/
 
@@ -114,7 +132,7 @@
 }
 
 #welcomeSection {
-        /* border: 1px solid yellowgreen; */
+        border: 1px solid yellowgreen;
         width: 60vw;
         margin: auto;
         height: 100vh;
@@ -154,7 +172,7 @@
 }
 
 #detailsSection {
-        /* border: 1px solid orange; */
+        border: 1px solid orange;
         width: 75vw;
         height: 100vh;
         margin: 0 auto;
@@ -175,4 +193,22 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+}
+
+@media only screen and (max-width: 766px) {
+        #welcomeSection{
+                position: absolute;
+                width: 100vw;
+                height: 100vh;
+                background-color: #fafafc;
+        }
+
+        #searchSection {
+                width: 100vw;
+        }
+
+        #detailsSection {
+                position: absolute;
+                width: 100vw;
+        }
 }

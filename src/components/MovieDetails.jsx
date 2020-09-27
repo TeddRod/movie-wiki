@@ -1,10 +1,15 @@
 import React from 'react'
 
-function MovieDetails({currentMovie, setActor}) {
+function MovieDetails({currentMovie, setMovie, setActor}) {
 
         const selectActor = (clickedActor) => {
                 // console.log(clickedActor);
                 setActor(clickedActor)
+        }
+
+        const closeMovie = () => {
+                console.log("closing view");
+                setMovie(false)
         }
 
         return (
@@ -42,6 +47,7 @@ function MovieDetails({currentMovie, setActor}) {
                                                         </div>
                                                 ))}
                                         </section>
+                                        <button className="closeBtn" style={{ display: window.innerWidth < 766 ? "block" : "none" }} onClick={() => closeMovie()}>close</button>
                                 </div>
                         {/* )} */}
                 </div>

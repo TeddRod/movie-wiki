@@ -7,6 +7,7 @@ import ActorDetails from './components/ActorDetails';
 
 function App() {
 
+  const [welcomeActive, setWelcomeActive] = useState(true)
   const [currentList, setList] = useState()
   const [currentMovie, setMovie] = useState()
   const [currentActor, setActor] = useState()
@@ -24,12 +25,12 @@ function App() {
         <List currentList={currentList} setMovie={setMovie}/>
       </section>
 
-      {!currentMovie && (
-        <WelcomeCpt />
+      {!currentMovie && welcomeActive && (
+        <WelcomeCpt setWelcomeActive={setWelcomeActive} />
       )}
 
       {currentMovie && (
-        <MovieDetails currentMovie={currentMovie} setActor={setActor}/>
+        <MovieDetails currentMovie={currentMovie} setMovie={setMovie} setActor={setActor}/>
       )}
 
       {currentActor && (
